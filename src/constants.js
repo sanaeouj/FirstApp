@@ -36,6 +36,7 @@ export const buttonTexts = {
 };
 
 export const figureProps = {
+ 
   defaults: {
     width: 150,
     height: 180,

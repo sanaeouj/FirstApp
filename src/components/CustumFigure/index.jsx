@@ -1,24 +1,23 @@
-import Figure from 'react-bootstrap/Figure'
+import Figure from "react-bootstrap/Figure";
 import { figureProps } from "../../constants";
-const index = ({
-  width = figureProps.defaults.width,
-  height = figureProps.defaults.height,
-  image = figureProps.defaults.image,
-  titre = figureProps.defaults.titre,
-}) => {
+const index = (props) => {
+  const { width, height, image, titre } = props;
   return (
     <Figure>
       <Figure.Image
         width={width}
         height={height}
-        alt="171x180"
+        alt={`${width}x${height}`}
         src={image}
       />
-      <Figure.Caption>
-        {titre}
-      </Figure.Caption>
+      <Figure.Caption>{titre}</Figure.Caption>
     </Figure>
   );
 };
-
+index.defaultsProps = {
+  width: figureProps.defaults.width,
+  height: figureProps.defaults.height,
+  image: figureProps.defaults.image,
+  titre: figureProps.defaults.titre,
+};
 export default index;
