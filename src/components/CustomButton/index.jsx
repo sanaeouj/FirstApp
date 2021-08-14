@@ -1,6 +1,9 @@
 import Button from "react-bootstrap/Button";
+import { buttonTexts } from "../../constants"; 
 
-const index = (props) => {
-  return <Button variant={props.color}>{props.text}</Button>;
+
+const index = ({ color, text = buttonTexts.success }) => {
+  return <Button variant={color}>{text}</Button>;
 };
+
 export default index;
