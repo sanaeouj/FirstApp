@@ -9,11 +9,24 @@ const App = () => {
   return (
     <div>
     <CustomFigure
-      width={figureProps.versionA.width}
-      height={figureProps.versionA.height}
+      width={figureProps.maison.width}
+      height={figureProps.maison.height}
+      image={figureProps.maison.image}
+      titre={figureProps.maison.titre}
     />
-  </div>
-        
+  <br></br> <br></br>
+        <CustomFigure
+        width={figureProps.defaults.width}
+        height={figureProps.defaults.height}
+      />
+       <br></br> <br></br>
+       <CustomFigure
+       width={figureProps.ordinateur.width}
+      height={figureProps.ordinateur.height}
+      image={figureProps.ordinateur.image}
+      titre={figureProps.ordinateur.titre}
+      />
+    </div>
   )    
 
   }

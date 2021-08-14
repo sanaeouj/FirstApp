@@ -1,10 +1,10 @@
 import Figure from 'react-bootstrap/Figure'
 import { figureProps } from "../../constants";
 const index = ({
-  width = figureProps.default.width,
-  height = figureProps.default.height,
-  image = figureProps.default.image,
-  image = figureProps.default.text,
+  width = figureProps.defaults.width,
+  height = figureProps.defaults.height,
+  image = figureProps.defaults.image,
+  titre = figureProps.defaults.titre,
 }) => {
   return (
     <Figure>
@@ -15,7 +15,7 @@ const index = ({
         src={image}
       />
       <Figure.Caption>
-        text={text}
+        {titre}
       </Figure.Caption>
     </Figure>
   );
