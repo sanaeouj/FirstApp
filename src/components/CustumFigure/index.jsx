@@ -15,9 +15,6 @@ const index = (props) => {
   );
 };
 index.defaultsProps = {
-  width: figureProps.defaults.width,
-  height: figureProps.defaults.height,
-  image: figureProps.defaults.image,
-  titre: figureProps.defaults.titre,
-};
+  ... figureProps.defaults
+ };
 export default index;
