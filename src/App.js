@@ -1,28 +1,22 @@
-import { toUpperCase } from "./utils/stringUtils";
-import { STATIC_HELLO } from "./constants";
-import CustomButton from "./components/CustomButton";
-import CustomInput from "./components/CustumInput";
-import CustomFigure from "./components/CustumFigure";
-import {
-  bootstrapButtonVariant,
-  buttonTexts,
-  textInputProps,
-  figureProps,
-} from "./constants";
-
+import Login from "./containers/Login";
+import Category from "./containers/Category";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const App = () => {
   return (
-    <div>
-      <CustomFigure
-        {...figureProps.maison}
-      />
-      <br></br> <br></br>
-      <CustomFigure
-        
-      />
-      <br></br> <br></br>
-      <CustomFigure {...figureProps.ordinateur} />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/">
+          <Login />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/category">
+          <Category />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
+
 export default App;
