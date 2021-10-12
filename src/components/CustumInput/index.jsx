@@ -1,25 +1,44 @@
 import Form from "react-bootstrap/Form";
-import { textInputProps } from "../../constants";
+import { inputProps, buttonProps, textInputProps } from "../../constants";
+import Button from "../CustomButton";
+import "./index.css";
 const index = ({
+  label = textInputProps.default.label,
   type = textInputProps.default.type,
-  placeholder = textInputProps.default.placeholder,
+  placeholder=textInputProps.default.placeholder,
   onChange,
-  maxLength,
-  label,
   name,
-}) => {
+  className
+ }
+) => {
   return (
-    <div>
+    <Form>
       <Form.Label>{label}</Form.Label>
       <Form.Control
-        name={name}
         type={type}
+        name={name}
         placeholder={placeholder}
         onChange={onChange}
-        maxLength={maxLength}
+        name={name}
+        className={className}
       />
-    </div>
+    </Form>
   );
 };
-
 export default index;
+
+/* import { textInputProps } from "../../constants";
+import { textInputProps2 } from "../../constants";
+const {
+  defaults: { placeholder: placeholders, type: types}
+} = textInputProps2;
+const index = ({
+  type = types,
+  placeholder = placeholders,
+}) => (
+  <Form>
+    <Form.Control type={type} placeholder={placeholder} />
+  </Form>
+);
+export default index;
+  */
